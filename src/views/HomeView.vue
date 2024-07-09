@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import axios from 'axios';
-import { ref, onMounted } from 'vue'
+import authService from "@/services/authService";
+import { ref, onMounted } from "vue";
 import names from "../names";
 
 const avatarEndpoint = "https://avatars.dicebear.com/v2/avataaars/";
@@ -17,7 +17,7 @@ function getAvatar(name) {
 const beneficiaries = ref(null)
   
 onMounted(async() => {
-  const response = await axios.get(beneficiariesEndpoint);
+  const response = await authService.login.get(beneficiariesEndpoint);
   beneficiaries.value = response.data;
   console.log(beneficiaries);
 })
