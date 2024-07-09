@@ -1,0 +1,62 @@
+.App {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    margin-left: 15px;
+    align-items: center;
+}
+.Title-Beneficiaries-list {
+    display: flex;
+    justify-content: center;
+}
+.Add-beneficiary-button-container {
+    display: flex;
+    flex-direction: row;
+}
+.Add-beneficiary-button {
+    width: 150px;
+    color: var(--vt-c-black-soft);
+    border: var(--vt-c-text-light-1) 1px solid;
+    border-radius: 10px;
+    background: var(--vt-c-white-soft);
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.Add-beneficiary-button:hover {
+    background-color: var(--vt-c-indigo);
+    color: var(--vt-c-white-soft);
+}
+.Search-bar {
+    width: 30%;
+    height: 35px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+.Beneficiaries-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: auto;
+    gap: 10px;
+}
+.Beneficiary-user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Button-container {
+    position: absolute;
+    z-index: 1;
+}
+.Button-container > button > img {
+    object-fit: contain;
+    width: 15px;
+}
+.Edit-button {
+    right: 20px;
+}
+.Cross-button {
+    left: 20px;
+}
